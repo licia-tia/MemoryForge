@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoryforge.local/schemas/scene-group-summary.schema.json",
+  "title": "SceneGroupSummary",
+  "type": "object",
+  "required": [
+    "scene_group_id",
+    "asset_id",
+    "source_in_sec",
+    "source_out_sec",
+    "summary",
+    "visual_tags",
+    "sound_tags",
+    "best_segments",
+    "repetitive_segments",
+    "quality_score"
+  ],
+  "properties": {
+    "scene_group_id": { "type": "string", "minLength": 1 },
+    "asset_id": { "type": "string", "minLength": 1 },
+    "source_in_sec": { "type": "number", "minimum": 0 },
+    "source_out_sec": { "type": "number", "minimum": 0 },
+    "summary": { "type": "string" },
+    "visual_tags": { "type": "array", "items": { "type": "string" } },
+    "sound_tags": { "type": "array", "items": { "type": "string" } },
+    "best_segments": { "type": "array", "items": { "type": "string" } },
+    "repetitive_segments": { "type": "array", "items": { "type": "string" } },
+    "quality_score": { "type": "number", "minimum": 0, "maximum": 1 }
+  },
+  "additionalProperties": false
+}

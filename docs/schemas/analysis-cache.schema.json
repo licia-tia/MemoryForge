@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoryforge.local/schemas/analysis-cache.schema.json",
+  "title": "AnalysisCache",
+  "type": "object",
+  "required": [
+    "cache_key",
+    "target_type",
+    "target_id",
+    "content_hash",
+    "media_mtime",
+    "segment_params",
+    "provider",
+    "model_name",
+    "model_version",
+    "prompt_version",
+    "summary_version",
+    "artifact_path"
+  ],
+  "properties": {
+    "cache_key": { "type": "string", "minLength": 1 },
+    "target_type": { "type": "string", "enum": ["asset", "segment", "summary", "scene_group"] },
+    "target_id": { "type": "string", "minLength": 1 },
+    "content_hash": { "type": "string", "minLength": 1 },
+    "media_mtime": { "type": "number" },
+    "segment_params": { "type": "object", "additionalProperties": true },
+    "provider": { "type": "string" },
+    "model_name": { "type": "string" },
+    "model_version": { "type": "string" },
+    "prompt_version": { "type": "string" },
+    "summary_version": { "type": "string" },
+    "artifact_path": { "type": "string" }
+  },
+  "additionalProperties": false
+}

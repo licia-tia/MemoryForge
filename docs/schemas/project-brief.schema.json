@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoryforge.local/schemas/project-brief.schema.json",
+  "title": "ProjectBrief",
+  "type": "object",
+  "required": [
+    "project_id",
+    "target_presets",
+    "project_summary",
+    "assets_count",
+    "photo_summaries",
+    "scene_groups",
+    "constraints"
+  ],
+  "properties": {
+    "project_id": { "type": "string", "minLength": 1 },
+    "target_presets": { "type": "array", "items": { "type": "string" } },
+    "project_summary": { "type": "string" },
+    "assets_count": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+    "photo_summaries": { "type": "array", "items": { "type": "object" } },
+    "scene_groups": { "type": "array", "items": { "type": "object" } },
+    "constraints": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false
+}

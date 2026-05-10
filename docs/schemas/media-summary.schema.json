@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoryforge.local/schemas/media-summary.schema.json",
+  "title": "MediaSummary",
+  "type": "object",
+  "required": [
+    "summary_id",
+    "target_type",
+    "target_id",
+    "description",
+    "tags",
+    "quality_score",
+    "suggested_use"
+  ],
+  "properties": {
+    "summary_id": { "type": "string", "minLength": 1 },
+    "target_type": { "type": "string", "enum": ["photo", "segment"] },
+    "target_id": { "type": "string", "minLength": 1 },
+    "time_range": { "type": ["string", "null"] },
+    "description": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "quality_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "photo_quality": { "type": ["object", "null"], "additionalProperties": true },
+    "suggested_use": { "type": "array", "items": { "type": "string" } },
+    "avoid_reason": { "type": "array", "items": { "type": "string" } },
+    "audio_summary": { "type": ["string", "null"] },
+    "speech_detected": { "type": ["boolean", "null"] },
+    "audio_quality_score": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "sound_tags": { "type": "array", "items": { "type": "string" } },
+    "usable_audio": { "type": ["boolean", "null"] }
+  },
+  "additionalProperties": false
+}

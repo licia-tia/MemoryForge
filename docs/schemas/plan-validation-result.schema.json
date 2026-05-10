@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoryforge.local/schemas/plan-validation-result.schema.json",
+  "title": "PlanValidationResult",
+  "type": "object",
+  "required": ["valid", "errors", "repairable"],
+  "properties": {
+    "valid": { "type": "boolean" },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "message"],
+        "properties": {
+          "code": { "type": "string" },
+          "item_id": { "type": ["string", "null"] },
+          "message": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "repairable": { "type": "boolean" },
+    "repair_prompt_path": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

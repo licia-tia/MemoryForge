@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoryforge.local/schemas/timeline-evaluation.schema.json",
+  "title": "TimelineEvaluation",
+  "type": "object",
+  "required": [
+    "preset",
+    "target_duration_sec",
+    "actual_duration_sec",
+    "duration_ok",
+    "photo_usage_count",
+    "low_quality_ratio",
+    "repetition_warning",
+    "coverage_notes",
+    "audio_warnings"
+  ],
+  "properties": {
+    "preset": { "type": "string", "minLength": 1 },
+    "target_duration_sec": { "type": "number", "exclusiveMinimum": 0 },
+    "actual_duration_sec": { "type": "number", "minimum": 0 },
+    "duration_ok": { "type": "boolean" },
+    "photo_usage_count": { "type": "integer", "minimum": 0 },
+    "low_quality_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "repetition_warning": { "type": "boolean" },
+    "coverage_notes": { "type": "array", "items": { "type": "string" } },
+    "audio_warnings": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

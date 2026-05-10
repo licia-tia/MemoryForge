@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoryforge.local/schemas/asset.schema.json",
+  "title": "Asset",
+  "type": "object",
+  "required": [
+    "asset_id",
+    "media_type",
+    "source_path",
+    "pair_id",
+    "captured_at_utc",
+    "duration_sec",
+    "camera",
+    "favorite",
+    "content_hash"
+  ],
+  "properties": {
+    "asset_id": { "type": "string", "minLength": 1 },
+    "media_type": {
+      "type": "string",
+      "enum": ["photo", "video", "live_photo_still", "live_photo_motion"]
+    },
+    "source_path": { "type": "string", "minLength": 1 },
+    "pair_id": { "type": ["string", "null"] },
+    "captured_at_utc": { "type": ["string", "null"], "format": "date-time" },
+    "duration_sec": { "type": "number", "minimum": 0 },
+    "camera": { "type": ["string", "null"] },
+    "favorite": { "type": "boolean" },
+    "content_hash": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": false
+}
