@@ -1,14 +1,28 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
 .cache/
-.coverage
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
-.venv/
-__pycache__/
+
+# Python packaging
 *.egg-info/
-*.pyc
 build/
 dist/
+wheelhouse/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test and coverage outputs
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
 
 # Local MemoryForge project outputs
 analysis/
@@ -16,3 +30,14 @@ cache/
 logs/
 output/
 memoryforge.toml
+
+# Local secrets and environment
+.env
+.env.*
+!.env.example
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
