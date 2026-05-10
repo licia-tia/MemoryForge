@@ -2,7 +2,9 @@
 
 ## Product
 
+- `docs/product/memoryforge-architecture-v0.1.md` - original Phase 1 architecture source.
 - `docs/product/phase1-mvp.md` - Phase 1 scope and command milestones.
+- `docs/product/phase2-plan.md` - Phase 2 candidate-selection and embedding direction.
 
 ## Engineering
 

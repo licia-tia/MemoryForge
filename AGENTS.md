@@ -6,8 +6,8 @@ knowledge in `docs/`, schemas, tests, and executable tools.
 ## Start Here
 
 - Product architecture: `ARCHITECTURE.md`
-- Original architecture source: `MemoryForge_architecture_v0.1.md`
-- Phase 2 notes: `MemoryForge_phase2_plan.md`
+- Original architecture source: `docs/product/memoryforge-architecture-v0.1.md`
+- Phase 2 notes: `docs/product/phase2-plan.md`
 - Documentation index: `docs/index.md`
 - Active implementation plans: `docs/exec-plans/active/`
 - JSON schemas: `docs/schemas/`
